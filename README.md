@@ -1,90 +1,78 @@
-# Hotel_Taj_RAG_Based_Receptionist
 # Hotel Taj AI Q&A Assistant 💬
 
-An AI-powered Question & Answer assistant for **Hotel Taj** using **Retrieval-Augmented Generation (RAG)**.  
-This project allows users to ask questions about the restaurant (menus, chefs, timings, etc.) based on its text data, and get answers with source citations.
-
----
-
-## Features
-
-- Load restaurant data from text files (`Hotel_Taj.txt`).
-- Split large documents into smaller chunks for efficient processing.
-- Use **HuggingFace embeddings** (`all-MiniLM-L6-v2`) and **ChromaDB** for vector storage.
-- Perform similarity search to retrieve relevant document chunks.
-- Integrate **HuggingFace LLM** (`Nous-Hermes-13b-instruct-v0.1`) for natural language answers.
-- Provide **answer + source document** via a user-friendly **Gradio** interface.
-- Gracefully handle empty queries and errors.
-
----
-
-## Demo
-
-- Ask questions like:
-  - "What are the menu prices?"
-  - "Who is the head chef?"
-  - "Is it plant-based?"
-  - "What are the opening hours on Saturday?"
+An AI-powered Question & Answer assistant for **Hotel Taj** built using **Retrieval-Augmented Generation (RAG)**. This project allows users to ask questions about the restaurant (menus, chefs, timings, etc.) based on text data and get answers with source citations.
 
 ---
 
 ## Installation
 
-1. Clone this repository:
+Instructions on how to get a copy of the project and run it on your local machine.
+
+### Prerequisites
+
+_A guide on how to install the tools needed for running the project._
+
+- Python 3.10 or above
+- Git
+- HuggingFace API Key
+
+### Step-by-Step Setup
 
 ```bash
+# Clone the repository
 git clone https://github.com/your-username/hotel-taj-qa.git
 cd hotel-taj-qa
-
+```
+# Create and activate a virtual environment
 python -m venv venv
-source venv/bin/activate  # Linux/macOS
-venv\Scripts\activate     # Windows
+# Linux/macOS:
+source venv/bin/activate
+# Windows:
+venv\Scripts\activate
 
+# Install dependencies
 pip install -r requirements.txt
 
-HUGGINGFACE_API_KEY=your_huggingface_api_key
+# Set HuggingFace API key
+# Linux/macOS:
+export HUGGINGFACE_API_KEY=your_huggingface_api_key
+# Windows:
+set HUGGINGFACE_API_KEY=your_huggingface_api_key
 
-Add your restaurant data:
-Hotel_Taj.txt
-Usage
+# Add restaurant data
+# Place Hotel_Taj.txt in this project directory
+
+# Usage
+
+Explain how to test the project and give some examples.
+
+```bash
+# Run the application
 python app.py
+```
 
-This will:
+# Run the application
+python app.py
+Ask questions like:
 
-Load and split documents.
+"What are the menu prices?"
 
-Create a ChromaDB vector store.
+"Who is the head chef?"
 
-Set up the RAG chain.
+"Is the menu plant-based?"
 
-Launch a Gradio web app for interactive Q&A.
+"What are the opening hours on Saturday?"
 
-Open the URL displayed in your terminal to interact with the assistant.
+# Deploy
+To deploy a new project or host this app:
 
-How It Works
+A server or cloud instance with Python 3.10+ installed
 
-Document Loading & Splitting
-Large text files are split into smaller chunks using RecursiveCharacterTextSplitter.
-
-Embeddings & Vector Store
-Chunks are embedded with HuggingFace embeddings and stored in ChromaDB for similarity search.
-
-Retrieval-Augmented Generation (RAG)
-
-Retrieve relevant chunks using vector similarity.
-
-Feed retrieved chunks to a HuggingFace LLM to generate answers.
-
-Return answers with source document references.
-
-User Interface
-
-Gradio app allows users to input questions and view answers with sources.
-
-Includes example questions for testing.
-
-Install all dependecies with
+Install all dependencies using:
+```bash
 pip install -r requirements.txt
-Contact
+```
 
-Developed by Sanket 
+
+
+
