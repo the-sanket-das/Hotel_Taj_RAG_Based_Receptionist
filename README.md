@@ -1,78 +1,25 @@
-# Hotel Taj AI Q&A Assistant 💬
+# 🏨 Hotel Taj AI Q&A Assistant — RAG + LangChain
 
-An AI-powered Question & Answer assistant for **Hotel Taj** built using **Retrieval-Augmented Generation (RAG)**. This project allows users to ask questions about the restaurant (menus, chefs, timings, etc.) based on text data and get answers with source citations.
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-00A67E?style=for-the-badge&logo=chainlink&logoColor=white)
+![HuggingFace](https://img.shields.io/badge/HuggingFace-FCC624?style=for-the-badge&logo=huggingface&logoColor=black)
+![ChromaDB](https://img.shields.io/badge/ChromaDB-6C63FF?style=for-the-badge&logo=databricks&logoColor=white)
+![Gradio](https://img.shields.io/badge/Gradio-FF4B4B?style=for-the-badge&logo=gradio&logoColor=white)
+![RAG](https://img.shields.io/badge/RAG-Retrieval%20Augmented%20Generation-412991?style=for-the-badge&logo=openai&logoColor=white)
 
 ---
 
-## Installation
+## 🧩 Project Overview
 
-Instructions on how to get a copy of the project and run it on your local machine.
+**Hotel Taj AI Assistant** is a **Retrieval-Augmented Generation (RAG)**–based chatbot built using **LangChain** and **Hugging Face models**.  
+It allows users to ask **contextual, factual questions** about Hotel Taj — such as its menu, chef, events, or policies — and get responses generated from its official data file (`Hotel_Taj.txt`).
 
-### Prerequisites
+> 💬 The assistant retrieves relevant information from a knowledge base, augments the user’s question with that context, and generates accurate, explainable responses — all in real time.
 
-_A guide on how to install the tools needed for running the project._
+---
 
-- Python 3.10 or above
-- Git
-- HuggingFace API Key
-
-### Step-by-Step Setup
+## 🌐 Live Interface (Gradio)
 
 ```bash
-# Clone the repository
-git clone https://github.com/your-username/hotel-taj-qa.git
-cd hotel-taj-qa
-```
-# Create and activate a virtual environment
-python -m venv venv
-# Linux/macOS:
-source venv/bin/activate
-# Windows:
-venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Set HuggingFace API key
-# Linux/macOS:
-export HUGGINGFACE_API_KEY=your_huggingface_api_key
-# Windows:
-set HUGGINGFACE_API_KEY=your_huggingface_api_key
-
-# Add restaurant data
-# Place Hotel_Taj.txt in this project directory
-
-# Usage
-
-Explain how to test the project and give some examples.
-
-```bash
-# Run the application
+# Run the project
 python app.py
-```
-
-# Run the application
-python app.py
-Ask questions like:
-
-"What are the menu prices?"
-
-"Who is the head chef?"
-
-"Is the menu plant-based?"
-
-"What are the opening hours on Saturday?"
-
-# Deploy
-To deploy a new project or host this app:
-
-A server or cloud instance with Python 3.10+ installed
-
-Install all dependencies using:
-```bash
-pip install -r requirements.txt
-```
-
-
-
-
