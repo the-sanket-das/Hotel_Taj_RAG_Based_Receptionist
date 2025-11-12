@@ -18,8 +18,3 @@ It allows users to ask **contextual, factual questions** about Hotel Taj — suc
 
 ---
 
-## 🌐 Live Interface (Gradio)
-
-```bash
-# Run the project
-python app.py
